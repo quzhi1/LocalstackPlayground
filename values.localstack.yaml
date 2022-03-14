@@ -1,0 +1,10 @@
+service:
+  type: LoadBalancer
+
+startServices: "dynamodb,sqs"
+
+extraEnvVars:
+  - name: EDGE_BIND_HOST
+    value: "0.0.0.0"
+  - name: HOSTNAME_EXTERNAL
+    value: "0.0.0.0"
